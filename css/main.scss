@@ -1,49 +1,91 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
 ---
-@charset "utf-8";
 
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import "base";
 
+* {
+margin: 0;
+padding: 0;
+}
 
-// Our variables
-$base-font-family: Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
+body {
+font-family: "Fira Sans", sans-serif;
+color: #25274B;
+}
 
-$spacing-unit:     30px;
-
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
-
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
-
-$on-palm:          600px;
-$on-laptop:        800px;
-
-
-
-// Using media queries with like this:
-// @include media-query($palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
+ul, li {
+list-style: none;
 }
 
 
+section.content {
 
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-        "base",
-        "layout",
-        "syntax-highlighting"
-;
+width: 960px;
+margin: 0 auto;
+display: flex;
+
+}
+
+header#main-header {
+text-align: center;
+padding: 2em 0;
+em {
+font-weight: bold;
+font-style: normal;
+color: white;
+}
+}
+
+aside#sidebar {
+width: 15em;
+padding-bottom: 2em;
+background: #EEEEF1;
+div.main-container {
+&>header {
+opacity: 0.66;
+text-transform: uppercase;
+margin: 1em 2em 0em 2em;
+padding: 1em 0em;
+border-bottom: 1px solid rgba(#25274B,0.05);
+font-size: 0.75em;
+}
+header.app-title {
+margin: 1em 2em 0em 1.5em;
+}
+}
+div {
+a {
+font-size: 0.65em;
+display: block;
+padding: 0.45em 3em;
+font-weight: normal;
+color: #565877;
+text-decoration: none;
+&:hover {
+color: white;
+background: #565877;
+}
+}
+}
+
+}
+
+div.read-area {
+background-color: white;
+flex:2;
+padding: 1em 2em;
+header {
+padding-bottom: 1em;
+}
+h1 {
+padding: 0.25em 0;
+border-bottom: 1px solid rgba(#25274B, 0.15);
+}
+}
+
+ul#apps {
+.app-title {
+text-transform: capitalize;
+}
+}

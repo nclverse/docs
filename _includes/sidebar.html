@@ -1,0 +1,34 @@
+<aside id="sidebar">
+
+  <div class="main-container">
+    <header><h1>Apps</h1></header>
+    <div>
+      <header class="app-title"><h1>Exam Vault</h1></header>
+      <ul>
+        {% for post in site.categories.exam-vault %}
+        <li>
+          <h2>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </h2>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  <div class="main-container">
+    <header><h1>Utilities</h1></header>
+    <div>
+      <header class="app-title"><h1>Gateway</h1></header>
+      <ul>
+        {% for post in site.categories.gateway %}
+        <li>
+          <h2>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </h2>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</aside>

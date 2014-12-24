@@ -7,11 +7,16 @@
 
     {% include header.html %}
 
-    <div class="page-content">
-      <div class="wrapper">
+    <section class="content">
+
+    {% include sidebar.html %}
+
+      <div class="read-area">
+
         {{ content }}
+
       </div>
-    </div>
+    </section>
 
     {% include footer.html %}
 
